@@ -13,4 +13,6 @@ int main() {
   const string* cp = &test;
   string* q = const_cast<string*>(cp);
   cout << *q << slope << endl;
+
+  // reinterpret cast is dangerous.
 }
