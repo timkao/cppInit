@@ -1,0 +1,3 @@
+hello world!
+we are trying ifstream
+and ofstrea as well
