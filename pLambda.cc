@@ -3,6 +3,9 @@
 #include <vector>
 #include <numeric>
 
+
+using std::string;
+
 // e10.14
 auto sumTwo = [](int a, int b) -> int {
   return a + b;
@@ -34,5 +37,13 @@ int main() {
     std::cout << "new number is " << newNum << std::endl;
   }
 
+  //e10.11
+  std::vector<string> words = {"one", "two", "three", "four", "five"};
+  stable_sort(words.begin(), words.end(), [](const string& s1, const string s2) -> bool {
+    return s1.size() < s2.size();
+  });
+  for (string word : words) {
+    std::cout << word << std::endl;
+  }
   return 0;
 }
