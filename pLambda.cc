@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <numeric>
 
 // e10.14
 auto sumTwo = [](int a, int b) -> int {
@@ -17,5 +18,8 @@ int main() {
       std::cout << sum << std::endl;
   });
 
+  // e10.3
+  int result = std::accumulate(nums.begin(), nums.end(), 18);
+  std::cout << "The result is " << result << std::endl;
   return 0;
 }
